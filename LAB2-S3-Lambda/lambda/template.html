@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raport koszyków - Lambda</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf2ff;
+            color: #243248;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 70px auto;
+            padding: 35px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2563eb;
+            text-align: center;
+        }
+
+        .description {
+            text-align: center;
+            color: #64748b;
+        }
+
+        .report {
+            margin-top: 30px;
+            padding: 20px;
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>Raport dla {{IMIE}}</h1>
+
+        <p class="description">
+            Indywidualny raport koszyków wygenerowany przez AWS Lambda.
+        </p>
+
+        <p class="description">
+            Szablon został zaktualizowany w S3 bez ponownego wdrażania funkcji Lambda.
+        </p>
+
+        <section class="report">
+            <h2>Podsumowanie zakupów</h2>
+            <p>Liczba koszyków: <strong>15</strong></p>
+            <p>Liczba produktów: <strong>48</strong></p>
+            <p>Łączna wartość: <strong>1250 zł</strong></p>
+        </section>
+
+        <p class="footer">
+            Strona generowana dynamicznie przez AWS Lambda w LocalStack.
+        </p>
+    </main>
+</body>
+</html>
